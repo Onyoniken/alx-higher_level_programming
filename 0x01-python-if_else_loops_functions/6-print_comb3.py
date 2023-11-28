@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-for k in range (9):
+for k in range (0, 9):
     for l in range(k + 1, 10):
-        if k * 10 + l < 89:
-            print("{:d}{:d}".format(k, l), end=",")
-        print("{:d}".format(89))
+        if k == 8 and l == 89:
+            print("{}{}".format(k, l))
+        else
+        print("{}{}".format(k, l)), end=",")
