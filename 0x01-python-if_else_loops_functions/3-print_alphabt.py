@@ -1,5 +1,4 @@
-#!/usrbin/python3
-for k in range(97, 123:
-        if (k == 101) or (k == 113):
-        continue
-        print(chr(k).format(), end="")
+#!/usr/bin/python3
+for a in range(ord('a'), ord('z') + 1):
+    if a != ord('q') and a != ord('e'):
+        print("{:c}".format(a), end="")
