@@ -1,3 +1,8 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 def multiply_by_2(a_dictionary):
-    return {key: value * 2 for key, value in a_dictionary.items()}
+    n_dir = a_dictionary.copy()
+    l_keys = list(n_dir.keys())
+
+    for k in l_keys:
+        n_dir[k] *= 2
+    return (n_dir)
