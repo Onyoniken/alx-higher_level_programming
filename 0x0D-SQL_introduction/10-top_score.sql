@@ -3,4 +3,4 @@
 --records ordered by score
 --name passed as argument of mysql
 
-SELECT score, name FROM second_table ORDERED BY score DESC;
+SELECT score, name FROM second_table ORDER BY score DESC;
