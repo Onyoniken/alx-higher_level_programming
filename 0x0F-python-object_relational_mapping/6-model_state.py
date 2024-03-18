@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
 """
-script defines state class and Base class
+This script defines a State class and
+a Base class to work with MySQLAlchemy ORM.
 """
 import sys
 from model_state import Base, State
