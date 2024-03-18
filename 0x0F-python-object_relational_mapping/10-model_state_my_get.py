@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Lists State objects containing letter `a`
+This script lists all State objects
+that contain the letter `a`
 from the database `hbtn_0e_6_usa`.
 """
 
