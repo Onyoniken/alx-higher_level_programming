@@ -1,13 +1,12 @@
 #!/usr/bin/python3
+
 """
 script defines state class and base class
 """
-from sqlalchemy import Column, Interger, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
-
-clas State(Base):
     """
     state class
     """
