@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-prints all city objects from database
+This script prints all City objects
+from `hbtn_0e_14_usa`.
 """
+
 from sys import argv
 from model_state import State, Base
 from model_city import City
@@ -10,13 +12,15 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    gets cities fro the database
+    Access to the database to get cities
+    from the database.
     """
+
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
-            argv[1], argv[2], argv[3])
+        argv[1], argv[2], argv[3])
 
     engine = create_engine(db_url)
-    Session = sessionmake(bind=engine)
+    Session = sessionmaker(bind=engine)
 
     session = Session()
 
