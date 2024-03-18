@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-script defines city class
+This script defines a City class
+
 """
+
 from relationship_state import Base, State
 from sqlalchemy import Column, Integer, String, ForeignKey
 
+
 class City(Base):
-    """
-    City class
-    """
+    """City class"""
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)

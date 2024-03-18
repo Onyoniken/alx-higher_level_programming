@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-script that prints city objects from database
+This script prints City objects
+from the database `hbtn_0e_14_usa`.
 """
 
 from sys import argv
@@ -11,11 +12,12 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    access database and get cities from databse
+    Access database and get the cities
+    from the database.
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-            argv[1], argv[2], argv[3])
+        argv[1], argv[2], argv[3])
     engine = create_engine(db_uri)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
