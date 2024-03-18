@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-script prints state object from database
+Prints the first State object from `hbtn_0e_6_usa`.
 """
+
 from sys import argv
 from model_state import State, Base
 from sqlalchemy import create_engine
@@ -9,7 +10,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    gets state from database 
+    Gets state from database
     """
 
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
