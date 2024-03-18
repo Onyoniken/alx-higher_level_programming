@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    gets state from database
+    gets state from database 
     """
 
     db_url = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
