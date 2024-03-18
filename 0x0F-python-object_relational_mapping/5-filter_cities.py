@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 script takes state name as arg and lists cities in that state
 """
@@ -10,11 +11,11 @@ if __name__ == "__main__":
     access database and gets cities from it
     """
     db_connect = db.connect(host="localhost", port=3306,
-            user=argv[1], passwd=argv[2], db=argv[3])
+                            user=argv[1], passwd=argv[2], db=argv[3])
 
     with db_connect.cursor() as db_cursor:
         db_cursor.execute("""
-            SELECT 
+            SELECT
                 cities.id, cities.name
             FROM
                 cities
@@ -23,7 +24,7 @@ if __name__ == "__main__":
             ON
                 cities.state_id = states.id
             WHERE
-                states.name LIKE BINARY %(state_names)s
+                states.name LIKE BINARY %(state_name)s
             ORDER BY
                 cities.id ASC
         """, {
@@ -33,5 +34,3 @@ if __name__ == "__main__":
 
     if rows_selected is not None:
         print(", ".join([row[1] for row in rows_selected]))
-
-
