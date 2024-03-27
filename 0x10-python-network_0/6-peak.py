@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-""" Finds peak in list of unsorted int"""
+""" Finds a peak list of unsorted integers"""
 
 
 def find_peak(list_of_integers):
-
+    """
+    Args
+    """
     size = len(list_of_integers)
     mid_e = size
     mid = size // 2
